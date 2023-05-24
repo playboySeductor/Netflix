@@ -2,7 +2,7 @@ import React from 'react';
 import background from "../assets/login.jpg";
 import styled from "styled-components";
 
-export default function backgroundimage() {
+export default function backgroundImage() {
   return (
     <Container>
         <img src={background} alt="background" />
@@ -10,4 +10,11 @@ export default function backgroundimage() {
   );
 }
 
-// const Container = styled.div``
+const Container = styled.div`
+height:100vh;
+width:100vw;
+img{
+  height:100vh;
+width:100vw;
+}
+`

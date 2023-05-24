@@ -1,19 +1,36 @@
-// import React from 'react'
+ import React from 'react';
+ import { useNavigate } from "react-router-dom";
+ import styled from "styled-components";
+ import logo from "../assets/logo.png"
 
-// export default function header() {
-//   return (
-//     <div>header</div>
-//   );
-// }
+ export default function header(props) {
+  const navigate = useNavigate();
+   return (
+     
+     <Container className='flex a-center j-between'>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <button onClick={()=> navigate(props.login ? "/login" : "/signup")}>{props.login ? "Log In" : "Sign In"}</button>
+     </Container>
+   );
+ }
 
-import React from 'react'
-
-function header() {
-  return (
-    <div>
-      header
-    </div>
-  )
+const Container = styled.div`
+padding: 0 4rem;
+.logo{
+  img{
+    height:  5rem;
+  }
 }
-
-export default header
+button{
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border: none;
+  cursor:pointer;
+  color:white;
+  border-radius: 0.2 rem;
+  font-weight: bolder;
+  font-size: 1.05rem;
+}
+`
