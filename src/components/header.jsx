@@ -3,7 +3,7 @@
  import styled from "styled-components";
  import logo from "../assets/logo.png"
 
- export default function header(props) {
+ export default function Header(props) {
   const navigate = useNavigate();
    return (
      
